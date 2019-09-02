@@ -3,6 +3,7 @@
 menu:
   主页: /
   随笔: /tags/随笔/
+  归档: /archives/index.html
 
 # SubNav
 subnav:
@@ -33,7 +34,7 @@ root: /
 # Content
 
 # 文章太长，截断按钮文字
-excerpt_link: more
+#excerpt_link: more
 # 文章卡片右下角常驻链接，不需要请设置为false
 show_all_link: '展开全文'
 # 数学公式
@@ -88,10 +89,10 @@ changyan_appid: false
 changyan_conf: false
 
 #4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
-disqus: false
+disqus: tigerholy
 
 #5、Gitment
-gitment_owner: false      #你的 GitHub ID
+gitment_owner: false     #你的 GitHub ID
 gitment_repo: ''          #存储评论的 repo
 gitment_oauth:
   client_id: ''           #client ID
@@ -116,15 +117,14 @@ slider:
 #  friends: false
 smart_menu:
   innerArchive: '所有文章'
-  friends: '友链'
+  friends: '友情链接'
   aboutme: '关于我'
 
 friends:
-  友情链接1: http://localhost:4000/
-  友情链接2: http://localhost:4000/
-  友情链接3: http://localhost:4000/
-  友情链接4: http://localhost:4000/
-  友情链接5: http://localhost:4000/
-  友情链接6: http://localhost:4000/
+  廖雪峰官网: http://liaoxuefeng.com/
+  B站: http://bilibili.com/
+  bootstrap官网: http://bootcss.com/
+  菜鸟教程: http://runoob.com/
+  刘江的博客: http://liujiangblog.com/
 
 aboutme: 用代码改变世界
