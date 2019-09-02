@@ -6,9 +6,9 @@
 title: tiger的个人博客
 subtitle:
 description: this is a site about personal blog
-keywords: python django 
+keywords: python django hexo
 author: tiger
-language: zh-hans
+language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL

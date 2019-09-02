@@ -42,7 +42,7 @@ hexo是Node.js 编写的静态博客框架，基于hexo我们可以快速的搭�
 ![](http://px6vw3ifw.bkt.clouddn.com/hexo.jpg)
 
 ---
-## 第三、安装git，关联github
+## 三、安装git，关联github
 1. git的安装过程请参照这里 [git官方文档](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)
 2. 注册一个github账号，如果你还没有账号点这里[github官网](https://github.com)注册,如果有账号请忽略这一步
 3. 添加SSH key
