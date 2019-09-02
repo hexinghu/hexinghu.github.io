@@ -39,7 +39,7 @@ hexo是Node.js 编写的静态博客框架，基于hexo我们可以快速的搭�
 1. 安装好node.js和淘宝镜像之后，执行<code> cnpm install -g hexo </code>
 2. 新建一个文件夹blog,进入blog下，执行<code>hexo init</code>
 3. 安装完依赖包之后，执行<code>hexo s</code>,此时hexo本地服务就会启动，用浏览器打开"http://localhost:4000",就会看到如下页面。
-![](./hexo.jpg)
+![](http://px6vw3ifw.bkt.clouddn.com/hexo.jpg)
 
 ---
 ## 第三、安装git，关联github
