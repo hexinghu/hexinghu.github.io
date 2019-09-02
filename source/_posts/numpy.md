@@ -1,5 +1,5 @@
 ---
-title: numpy
+title: numpy学习教程
 date: 2019-09-02 15:22:36
 categories:
     - python
@@ -12,7 +12,6 @@ tags:
 
 ### NumPy--快速处理数据    
 [numpy官网](http://www.numpy.org/)
-####  *** 一、  ndarray 对象 *** 
  1 创建数组
  
 
