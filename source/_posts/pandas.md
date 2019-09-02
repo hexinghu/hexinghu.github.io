@@ -2,7 +2,7 @@
 title: pandas学习教程
 date: 2019-09-02 17:17:03
 categories:
-    -python
+    - python
 tags:
     - python
     - pandas
