@@ -12,6 +12,7 @@ tags:
 
 ### NumPy--快速处理数据    
 [numpy官网](http://www.numpy.org/)
+<!--more-->
  1 创建数组
  
 
