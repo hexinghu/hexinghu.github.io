@@ -57,25 +57,13 @@ a.shape
 ```python
 b.shape
 ```
-
-
-
-
     (4,)
-
-
-
 
 ```python
 c.shape
 ```
 
-
-
-
     (3, 4)
-
-
 
 使用数组的reshape()方法可以创建指定形状的新数组而原数组形状不变 ** 注意：此时创建的新数组和原来的数组共享数据存储空间改变任何一个数组的值，对方的值也会跟着改变 **
 
@@ -119,9 +107,6 @@ print(a.dtype)
 ```python
 set(np.typeDict.values())
 ```
-
-
-
 
     {numpy.bool_,
      numpy.bytes_,
