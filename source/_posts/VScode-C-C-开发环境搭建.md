@@ -8,7 +8,7 @@ tags:
 
 ## 在vscoe中搭建C/C++开发环境
 大家都知道用VS来开发C/C++的话虽然很方便，但是VS太过于臃肿和庞大，而且它还是要收费的，也没有VSCode那么美观的主题，所以很多人都会想用VSCode来开发C/C++程序，那么怎么用VSCode来搭建C/C++开发环境呢？下面仔细来介绍一下。
-
+<!--more-->
 1. 安装VsCode和MinGW64
 安装VSCode非常简单，可以到[官网](https://code.visualstudio.com/#alt-downloads)去下载安装.安装好VScode之后接着安装MinGW64，可以到[这里](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe)下载安装，安装完成之后，把MinGW加入到系统环境变量（也可以在安装的时候就选择加入环境变量）。
 2. 在VSCode中安装cpp插件
