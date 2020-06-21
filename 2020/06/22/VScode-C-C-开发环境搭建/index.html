@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>VScode C/C++开发环境搭建 | tiger的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在vscoe中搭建C/C++开发环境大家都知道用VS来开发C/C++的话虽然很方便，但是VS太过于臃肿和庞大，而且它还是要收费的，也没有VSCode那么美观的主题，所以很多人都会想用VSCode来开发C/C++程序，那么怎么用VSCode来搭建C/C++开发环境呢？下面仔细来介绍一下。  安装VsCode和MinGW64安装VSCode非常简单，可以到官网去下载安装.安装好VScode之后接着安装">
+  <meta name="description" content="在vscoe中搭建C/C++开发环境大家都知道用VS来开发C/C++的话虽然很方便，但是VS太过于臃肿和庞大，而且它还是要收费的，也没有VSCode那么美观的主题，所以很多人都会想用VSCode来开发C/C++程序，那么怎么用VSCode来搭建C/C++开发环境呢？下面仔细来介绍一下。">
 <meta name="keywords" content="VSCODE,C&#x2F;C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VScode C&#x2F;C++开发环境搭建">
 <meta property="og:url" content="http://yoursite.com/2020/06/22/VScode-C-C-开发环境搭建/index.html">
 <meta property="og:site_name" content="tiger的个人博客">
-<meta property="og:description" content="在vscoe中搭建C/C++开发环境大家都知道用VS来开发C/C++的话虽然很方便，但是VS太过于臃肿和庞大，而且它还是要收费的，也没有VSCode那么美观的主题，所以很多人都会想用VSCode来开发C/C++程序，那么怎么用VSCode来搭建C/C++开发环境呢？下面仔细来介绍一下。  安装VsCode和MinGW64安装VSCode非常简单，可以到官网去下载安装.安装好VScode之后接着安装">
+<meta property="og:description" content="在vscoe中搭建C/C++开发环境大家都知道用VS来开发C/C++的话虽然很方便，但是VS太过于臃肿和庞大，而且它还是要收费的，也没有VSCode那么美观的主题，所以很多人都会想用VSCode来开发C/C++程序，那么怎么用VSCode来搭建C/C++开发环境呢？下面仔细来介绍一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-06-21T18:28:08.771Z">
+<meta property="og:updated_time" content="2020-06-21T18:40:42.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VScode C&#x2F;C++开发环境搭建">
-<meta name="twitter:description" content="在vscoe中搭建C/C++开发环境大家都知道用VS来开发C/C++的话虽然很方便，但是VS太过于臃肿和庞大，而且它还是要收费的，也没有VSCode那么美观的主题，所以很多人都会想用VSCode来开发C/C++程序，那么怎么用VSCode来搭建C/C++开发环境呢？下面仔细来介绍一下。  安装VsCode和MinGW64安装VSCode非常简单，可以到官网去下载安装.安装好VScode之后接着安装">
+<meta name="twitter:description" content="在vscoe中搭建C/C++开发环境大家都知道用VS来开发C/C++的话虽然很方便，但是VS太过于臃肿和庞大，而且它还是要收费的，也没有VSCode那么美观的主题，所以很多人都会想用VSCode来开发C/C++程序，那么怎么用VSCode来搭建C/C++开发环境呢？下面仔细来介绍一下。">
   
     <link rel="alternative" href="/atom.xml" title="tiger的个人博客" type="application/atom+xml">
   
@@ -178,6 +178,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="在vscoe中搭建C-C-开发环境"><a href="#在vscoe中搭建C-C-开发环境" class="headerlink" title="在vscoe中搭建C/C++开发环境"></a>在vscoe中搭建C/C++开发环境</h2><p>大家都知道用VS来开发C/C++的话虽然很方便，但是VS太过于臃肿和庞大，而且它还是要收费的，也没有VSCode那么美观的主题，所以很多人都会想用VSCode来开发C/C++程序，那么怎么用VSCode来搭建C/C++开发环境呢？下面仔细来介绍一下。</p>
+<a id="more"></a>
 <ol>
 <li>安装VsCode和MinGW64<br>安装VSCode非常简单，可以到<a href="https://code.visualstudio.com/#alt-downloads" target="_blank" rel="noopener">官网</a>去下载安装.安装好VScode之后接着安装MinGW64，可以到<a href="https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe" target="_blank" rel="noopener">这里</a>下载安装，安装完成之后，把MinGW加入到系统环境变量（也可以在安装的时候就选择加入环境变量）。</li>
 <li>在VSCode中安装cpp插件<br>打开VScode软件，在扩展中搜索C/C++插件，安装好之后可以创建一个C/C++的工程文件夹，用VScode打开然后点击调试会自动生成一个.vscode的文件夹，这个文件夹里有一个lanch.json文件，再点击终端选择生成任务（选择默认模板即可）这时候会在.vscode文件夹下生成一个task.json文件。</li>
