@@ -185,15 +185,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>什么是hexo?<br>hexo是Node.js 编写的静态博客框架，基于hexo我们可以快速的搭建出我们的个人博客。如果要详细了解hexo,请看这里 <a href="http://www.hexo.io/docs" target="_blank" rel="noopener">hexo官网</a></p>
-<a id="more"></a>
-<hr>
-<h2 id="一、安装Node-js"><a href="#一、安装Node-js" class="headerlink" title="一、安装Node.js"></a>一、安装Node.js</h2><ol>
-<li>windows安装Node.js<br>1).windows 安装Node.js非常简单，只需要到<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js官网</a>下载安装包，然后双击打开一路下一步即可安装完毕。<br>2).将node.js添加进环境变量<br>3).安装淘宝镜像<code> npm install -g cnpm --registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></code><br></li>
+<h2 id><a href="#" class="headerlink" title></a><a id="more"></a></h2><h2 id="一、安装Node-js"><a href="#一、安装Node-js" class="headerlink" title="一、安装Node.js"></a>一、安装Node.js</h2><ol>
+<li>windows安装Node.js<br>1).windows 安装Node.js非常简单，只需要到<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js官网</a>下载安装包，然后双击打开一路下一步即可安装完毕。<br>2).将node.js添加进环境变量<br>3).安装淘宝镜像<code> npm install -g cnpm —registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></code><br><br></li>
 <li>linux安装Node.js<br>1).打开终端进入/usr/local执行<code>wget <a href="https://npm.taobao.org/mirrors/node/v10.16.3/node-v10.16.3-linux-x64.tar.xz" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node/v10.16.3/node-v10.16.3-linux-x64.tar.xz</a></code>命令</li>
 </ol>
-<p>2).下载成功后执行<code>tar -xvf node-v10.16.3-linux-x64.tar.xz</code>解压缩<br>3).执行<code>mv node-v10.16.3-linux-x64 nodejs</code><br>4).建立软连接<br>   <code>ln -s /usr/local/nodejs/node /usr/local/bin/node</code><br>   <code>ln -s /usr/local/nodejs/npm /usr/local/bin/npm</code><br>执行完上述几步之后node就安装好了。<br>5).安装淘宝镜<code> npm install -g cnpm --registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></code><br><br></p>
-<ol start="3">
-<li>mac安装Node.js<br>1).打开终端执行命令<code>brew install node</code><br>2).安装淘宝镜像<code> npm install -g cnpm --registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></code></li>
+<p>2).下载成功后执行<code>tar -xvf node-v10.16.3-linux-x64.tar.xz</code>解压缩<br>3).执行<code>mv node-v10.16.3-linux-x64 nodejs</code><br>4).建立软连接<br>   <code>ln -s /usr/local/nodejs/node /usr/local/bin/node</code><br>   <code>ln -s /usr/local/nodejs/npm /usr/local/bin/npm</code><br>执行完上述几步之后node就安装好了。<br>5).安装淘宝镜<code> npm install -g cnpm —registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></code><br><br></p>
+<ol>
+<li>mac安装Node.js<br>1).打开终端执行命令<code>brew install node</code><br>2).安装淘宝镜像<code> npm install -g cnpm —registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></code></li>
 </ol>
 <hr>
 <h2 id="二、安装hexo，搭建hexo博客本地环境"><a href="#二、安装hexo，搭建hexo博客本地环境" class="headerlink" title="二、安装hexo，搭建hexo博客本地环境"></a>二、安装hexo，搭建hexo博客本地环境</h2><ol>
@@ -205,13 +203,13 @@
 <h2 id="三、安装git，关联github"><a href="#三、安装git，关联github" class="headerlink" title="三、安装git，关联github"></a>三、安装git，关联github</h2><ol>
 <li>git的安装过程请参照这里 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">git官方文档</a></li>
 <li>注册一个github账号，如果你还没有账号点这里<a href="https://github.com" target="_blank" rel="noopener">github官网</a>注册,如果有账号请忽略这一步</li>
-<li>添加SSH key<br>打开git,执行<code>git config --global user.username 你的github用户名</code>，接着执行<code>git config --global user.email 你注册github时的邮箱</code>，然后执行<code>ssh-genkey -t rsa -C 你的邮箱</code>，此时会在C:\user\用户\ 目录下生成一个.ssh的文件夹,打开里面的id_rsa.pub文件把里面的内容全部复制到到下图红框内。<br><img src="http://px6vw3ifw.bkt.clouddn.com/addkey.jpg" alt><br>打开git 执行<code>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></code>,如出现以下界面说明已经添加成功。</li>
+<li>添加SSH key<br>打开git,执行<code>git config —global user.username 你的github用户名</code>，接着执行<code>git config —global user.email 你注册github时的邮箱</code>，然后执行<code>ssh-genkey -t rsa -C 你的邮箱</code>，此时会在C:\user\用户\ 目录下生成一个.ssh的文件夹,打开里面的id_rsa.pub文件把里面的内容全部复制到到下图红框内。<br><img src="http://px6vw3ifw.bkt.clouddn.com/addkey.jpg" alt><br>打开git 执行<code>ssh -T git@github.com</code>,如出现以下界面说明已经添加成功。</li>
 </ol>
 <p><img src="http://px6vw3ifw.bkt.clouddn.com/gittest.jpg" alt></p>
-<ol start="4">
+<ol>
 <li>有了github账号之后，登陆上github网站，然后按照下图步骤执行。</li>
 </ol>
-<p><img src="http://px6vw3ifw.bkt.clouddn.com/repo.jpg" alt><br>按照上图创建好仓库之后我们新建一个名为hexo的分支,把hexo设为默认分支。打开git把创建好的仓库克隆到本地，并把我们的hexo项目复制到仓库根目录下(这一步是为了后面我们异地更新博客做准备，因为hexo环境是在本地，我们部署到github的时候不会把我们的项目文件部署上去，所以我们需要创建一个分支来管理我们的项目文件，当我们用其他电脑更新博客的时候只需要把仓库克隆下来，在我们的hexo分支上更新博客即可)，确保我们当前在hexo分支，执行<code>git add . && git commit -m "first submit project files</code>。<br>打开blog目录下的_config.yml文件找到deploy项配置如下图<br><img src="http://px6vw3ifw.bkt.clouddn.com/config.jpg" alt><br>然后执行<code> git add . && git commit -m "提交信息"</code>，再执行<code>hexo g -d</code>,将项目部署到github上去。此时你打开浏览器并在地址栏输入你的仓库名称应该就可以看到一下界面了。<br><img src="http://px6vw3ifw.bkt.clouddn.com/hexo.jpg" alt></p>
+<p><img src="http://px6vw3ifw.bkt.clouddn.com/repo.jpg" alt><br>按照上图创建好仓库之后我们新建一个名为hexo的分支,把hexo设为默认分支。打开git把创建好的仓库克隆到本地，并把我们的hexo项目复制到仓库根目录下(这一步是为了后面我们异地更新博客做准备，因为hexo环境是在本地，我们部署到github的时候不会把我们的项目文件部署上去，所以我们需要创建一个分支来管理我们的项目文件，当我们用其他电脑更新博客的时候只需要把仓库克隆下来，在我们的hexo分支上更新博客即可)，确保我们当前在hexo分支，执行<code>git add . &amp;&amp; git commit -m “first submit project files</code>。<br>打开blog目录下的_config.yml文件找到deploy项配置如下图<br><img src="http://px6vw3ifw.bkt.clouddn.com/config.jpg" alt><br>然后执行<code> git add . &amp;&amp; git commit -m “提交信息”</code>，再执行<code>hexo g -d</code>,将项目部署到github上去。此时你打开浏览器并在地址栏输入你的仓库名称应该就可以看到一下界面了。<br><img src="http://px6vw3ifw.bkt.clouddn.com/hexo.jpg" alt></p>
 
       
 
@@ -378,7 +376,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装Node-js"><span class="toc-number">1.</span> <span class="toc-text">一、安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、安装hexo，搭建hexo博客本地环境"><span class="toc-number">2.</span> <span class="toc-text">二、安装hexo，搭建hexo博客本地环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、安装git，关联github"><span class="toc-number">3.</span> <span class="toc-text">三、安装git，关联github</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装Node-js"><span class="toc-number">2.</span> <span class="toc-text">一、安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、安装hexo，搭建hexo博客本地环境"><span class="toc-number">3.</span> <span class="toc-text">二、安装hexo，搭建hexo博客本地环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、安装git，关联github"><span class="toc-number">4.</span> <span class="toc-text">三、安装git，关联github</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -527,19 +525,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tech</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">VSCODE</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tech</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -187,15 +187,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-Series"><a href="#1-Series" class="headerlink" title="1. Series"></a>1. Series</h1><p>seriers 类似于具名一维数组</p>
-<a id="more"></a>
-
+        <h1 id="1-Series"><a href="#1-Series" class="headerlink" title="1. Series"></a>1. Series</h1><p>seriers 类似于具名一维数组<br><a id="more"></a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib.font_manager <span class="keyword">import</span> FontManager</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.linspace(<span class="number">0</span>,<span class="number">100</span>,<span class="number">1000</span>,dtype=np.int16)</span><br><span class="line">s = pd.Series(a,index=[i <span class="keyword">for</span> i <span class="keyword">in</span> range(len(a))])</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s</span><br></pre></td></tr></table></figure>
-
 <pre><code>0        0
 1        0
 2        0
@@ -257,40 +252,39 @@
 997     99
 998     99
 999    100
-Length: 1000, dtype: int16</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line">s.plot()</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210d8895be0&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_5_1.png" alt="png"></p>
+Length: 1000, dtype: int16
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line">s.plot()</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210d8895be0&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_5_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s2 = pd.Series(&#123;<span class="string">"小明"</span>:<span class="number">20</span>,<span class="string">"小华"</span>:<span class="number">30</span>,<span class="string">"张磊"</span>:<span class="number">40</span>&#125;,name=<span class="string">"s2"</span>)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s2</span><br></pre></td></tr></table></figure>
-
 <pre><code>小明    20
 小华    30
 张磊    40
-Name: s2, dtype: int64</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s2.plot(kind=<span class="string">"pie"</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210da794390&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_8_1.png" alt="png"></p>
+Name: s2, dtype: int64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s2.plot(kind=<span class="string">"pie"</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210da794390&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_8_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s2.__dict__</span><br></pre></td></tr></table></figure>
-
-<pre><code>{&apos;_is_copy&apos;: None, &apos;_data&apos;: SingleBlockManager
- Items: Index([&apos;小明&apos;, &apos;小华&apos;, &apos;张磊&apos;], dtype=&apos;object&apos;)
- IntBlock: 3 dtype: int64, &apos;_item_cache&apos;: {}, &apos;_name&apos;: &apos;s2&apos;, &apos;_subtyp&apos;: &apos;series&apos;, &apos;_index&apos;: Index([&apos;小明&apos;, &apos;小华&apos;, &apos;张磊&apos;], dtype=&apos;object&apos;), &apos;plot&apos;: &lt;pandas.plotting._core.SeriesPlotMethods object at 0x00000210DA6DA860&gt;}</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = pd.read_csv(<span class="string">"heart.csv"</span>)</span><br></pre></td></tr></table></figure>
-
+<pre><code>{&#39;_is_copy&#39;: None, &#39;_data&#39;: SingleBlockManager
+ Items: Index([&#39;小明&#39;, &#39;小华&#39;, &#39;张磊&#39;], dtype=&#39;object&#39;)
+ IntBlock: 3 dtype: int64, &#39;_item_cache&#39;: {}, &#39;_name&#39;: &#39;s2&#39;, &#39;_subtyp&#39;: &#39;series&#39;, &#39;_index&#39;: Index([&#39;小明&#39;, &#39;小华&#39;, &#39;张磊&#39;], dtype=&#39;object&#39;), &#39;plot&#39;: &lt;pandas.plotting._core.SeriesPlotMethods object at 0x00000210DA6DA860&gt;}
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = pd.read_csv(<span class="string">"heart.csv"</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -490,16 +484,15 @@ Name: s2, dtype: int64</code></pre><figure class="highlight python"><table><tr><
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[[<span class="string">"age"</span>,<span class="string">"cp"</span>,<span class="string">"chol"</span>]].plot()</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210dbd67278&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_12_1.png" alt="png"></p>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210dbd67278&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_12_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[[<span class="string">"sex"</span>,<span class="string">"cp"</span>,<span class="string">"ca"</span>]].plot.box()</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210dbf599b0&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_13_1.png" alt="png"></p>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210dbf599b0&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_13_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[[<span class="string">"sex"</span>,<span class="string">"cp"</span>,<span class="string">"ca"</span>]].plot.bar()</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210dc0bab38&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_14_1.png" alt="png"></p>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210dc0bab38&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_14_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.count()</span><br></pre></td></tr></table></figure>
-
 <pre><code>age         303
 sex         303
 cp          303
@@ -514,8 +507,8 @@ slope       303
 ca          303
 thal        303
 target      303
-dtype: int64</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.sum(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
+dtype: int64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.sum(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>age         16473.0
 sex           207.0
 cp            293.0
@@ -530,26 +523,26 @@ slope         424.0
 ca            221.0
 thal          701.0
 target        165.0
-dtype: float64</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>pandas.core.frame.DataFrame</code></pre><h1 id="2-DataFrame"><a href="#2-DataFrame" class="headerlink" title="2. DataFrame"></a>2. DataFrame</h1><p>DataFrame类似于一张Excel表格</p>
+dtype: float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(a)</span><br></pre></td></tr></table></figure>
+<pre><code>pandas.core.frame.DataFrame
+</code></pre><h1 id="2-DataFrame"><a href="#2-DataFrame" class="headerlink" title="2. DataFrame"></a>2. DataFrame</h1><p>DataFrame类似于一张Excel表格</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = pd.DataFrame(np.random.randint(<span class="number">0</span>,<span class="number">50</span>,(<span class="number">10</span>,<span class="number">5</span>)),columns=list(<span class="string">"ABCDE"</span>))</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -650,31 +643,30 @@ dtype: float64</code></pre><figure class="highlight python"><table><tr><td class
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.cumsum().plot()</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210e14ffcf8&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_22_1.png" alt="png"></p>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210e14ffcf8&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_22_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2 = pd.DataFrame(np.random.randn(<span class="number">50</span>,<span class="number">10</span>),columns=list(<span class="string">"ABCKEKFGHI"</span>))</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2.head(<span class="number">5</span>).cumsum().plot()</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210e2ca60b8&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_24_1.png" alt="png"></p>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210e2ca60b8&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_24_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2.head(<span class="number">5</span>).plot()</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210e1c4f6a0&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_25_1.png" alt="png"></p>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x210e1c4f6a0&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_25_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2.iloc[::<span class="number">2</span>,:].head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -765,20 +757,20 @@ dtype: float64</code></pre><figure class="highlight python"><table><tr><td class
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2.iloc[::<span class="number">2</span>,::<span class="number">2</span>].head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -839,7 +831,6 @@ dtype: float64</code></pre><figure class="highlight python"><table><tr><td class
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2.mean()</span><br></pre></td></tr></table></figure>
-
 <pre><code>A    0.215457
 B   -0.413272
 C    0.167236
@@ -850,8 +841,8 @@ F    0.111577
 G    0.046912
 H   -0.049657
 I    0.042516
-dtype: float64</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2.max()</span><br></pre></td></tr></table></figure>
-
+dtype: float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data2.max()</span><br></pre></td></tr></table></figure>
 <pre><code>A    2.887807
 B    3.246349
 C    1.824274
@@ -862,23 +853,23 @@ F    3.437710
 G    1.475031
 H    2.516398
 I    2.417594
-dtype: float64</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(<span class="string">"heart.csv"</span>)</span><br></pre></td></tr></table></figure>
-
+dtype: float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(<span class="string">"heart.csv"</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.head()</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -993,20 +984,20 @@ dtype: float64</code></pre><figure class="highlight python"><table><tr><td class
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.tail()</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1121,27 +1112,27 @@ dtype: float64</code></pre><figure class="highlight python"><table><tr><td class
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[<span class="string">'age'</span>].head()</span><br></pre></td></tr></table></figure>
-
 <pre><code>0    63
 1    37
 2    41
 3    56
 4    57
-Name: age, dtype: int64</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[[<span class="string">'age'</span>,<span class="string">'sex'</span>]].tail()</span><br></pre></td></tr></table></figure>
-
+Name: age, dtype: int64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[[<span class="string">'age'</span>,<span class="string">'sex'</span>]].tail()</span><br></pre></td></tr></table></figure>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1184,22 +1175,21 @@ Name: age, dtype: int64</code></pre><figure class="highlight python"><table><tr>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(arg)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> arg*<span class="number">8</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.apply(fun)</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2267,20 +2257,20 @@ Name: age, dtype: int64</code></pre><figure class="highlight python"><table><tr>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.head()</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2395,20 +2385,20 @@ Name: age, dtype: int64</code></pre><figure class="highlight python"><table><tr>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[bdata&gt;<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3476,20 +3466,20 @@ Name: age, dtype: int64</code></pre><figure class="highlight python"><table><tr>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.iloc[[<span class="number">2</span>,<span class="number">4</span>]]</span><br></pre></td></tr></table></figure>
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3553,17 +3543,16 @@ Name: age, dtype: int64</code></pre><figure class="highlight python"><table><tr>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.loc[<span class="number">2</span>:,[<span class="string">"age"</span>,<span class="string">"sex"</span>]].head(<span class="number">10</span>).mean()</span><br></pre></td></tr></table></figure>
-
 <pre><code>age    52.2
 sex     0.6
-dtype: float64</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.loc[::<span class="number">2</span>,::<span class="number">3</span>].tail(<span class="number">9</span>).plot()</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x229fb278390&gt;</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_10_1.png" alt="png"></p>
+dtype: float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.loc[::<span class="number">2</span>,::<span class="number">3</span>].tail(<span class="number">9</span>).plot()</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x229fb278390&gt;
+</code></pre><p><img src="http://px6vw3ifw.bkt.clouddn.com/output_10_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.loc[<span class="number">0</span>,<span class="string">"age"</span>] = <span class="number">30</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.loc[<span class="number">0</span>,<span class="string">'age'</span>]</span><br></pre></td></tr></table></figure>
-
-<pre><code>30</code></pre>
+<pre><code>30
+</code></pre>
       
 
       
@@ -3887,19 +3876,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tech</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">VSCODE</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tech</a>
               </li>
              
               <li class="article-tag-list-item">

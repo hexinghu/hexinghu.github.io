@@ -181,10 +181,8 @@
       
         <h2 id="Markdown-使用教程"><a href="#Markdown-使用教程" class="headerlink" title="Markdown 使用教程"></a>Markdown 使用教程</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>markdown 通过<code>#</code>来标识标题，有几个<code>#</code>就表示几级标题。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-
 <hr>
 <a id="more"></a>
-
 <h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><ul>
 <li><code>**粗体**</code>表示<strong>粗体</strong></li>
 <li><code>*斜体*</code>表示<em>斜体</em></li>
@@ -200,7 +198,6 @@
 </blockquote>
 <hr>
 <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Markdown超链接的表示为:[超链接名称](超链接地址) 例如[百度](http://www.baidu.com)</span><br></pre></td></tr></table></figure>
-
 <p>例如：<a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
 <p>图片的表示和超链接差不多，只是在前面多加了一个！，例如<img src="http://www.acemark.net/img/icon.jpg" alt="图片"></p>
 <hr>
@@ -208,7 +205,6 @@
 <li>无序列表<br><code>*</code>、<code>+</code>、<code>-</code>都可以标识无序列表，例如：</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ 项目一</span><br><span class="line">* 项目二</span><br><span class="line">- 项目三</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>项目一</li>
 </ul>
@@ -218,11 +214,10 @@
 <ul>
 <li>项目三</li>
 </ul>
-<ol start="2">
+<ol>
 <li>有序列表<br>有序列表用过在项目前面加数字来标识。</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 项目一</span><br><span class="line">2. 项目二</span><br><span class="line">3. 项目三</span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
 <ol>
 <li>项目一</li>
@@ -231,66 +226,73 @@
 </ol>
 <hr>
 <h3 id="ToDo-标记"><a href="#ToDo-标记" class="headerlink" title="ToDo 标记"></a>ToDo 标记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 未完成</span><br><span class="line">- [X] 已完成</span><br></pre></td></tr></table></figure>
-
 <ul>
-<li><input disabled type="checkbox"> 未完成</li>
-<li><input checked disabled type="checkbox"> 已完成</li>
+<li>[ ] 未完成</li>
+<li>[x] 已完成</li>
 </ul>
 <hr>
 <h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">｜列名1｜列名2｜列名3｜</span><br><span class="line">｜---｜---｜---｜</span><br><span class="line">｜单元一｜单元二｜单元三｜</span><br><span class="line">｜单元四｜单元五｜单元六｜</span><br><span class="line">:--- 表示左对齐</span><br><span class="line">--- 表示剧中对齐</span><br><span class="line">---： 表示右对齐</span><br></pre></td></tr></table></figure>
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">标题 1</th>
+<th style="text-align:left">标题 1</th>
 <th>标题 2</th>
-<th align="right">标题 3</th>
+<th style="text-align:right">标题 3</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">内容 1</td>
+<tbody>
+<tr>
+<td style="text-align:left">内容 1</td>
 <td>内容 2</td>
-<td align="right">内容 3</td>
+<td style="text-align:right">内容 3</td>
 </tr>
 <tr>
-<td align="left">内容 4</td>
+<td style="text-align:left">内容 4</td>
 <td>内容 5</td>
-<td align="right">内容 6</td>
+<td style="text-align:right">内容 6</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <hr>
 <h3 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h3><ul>
 <li>行内公式<br>行内公式包裹在两个<code>$</code>符号之间<br>$f(x)=x+x^2$</li>
 <li>块级公式</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;bmatrix&#125;</span><br><span class="line">A&amp;2&amp;3\\2&amp;3&amp;4\\8&amp;9&amp;9</span><br><span class="line">\end&#123;bmatrix&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-
-<p>$$<br>\begin{bmatrix}<br>1&amp;2&amp;3\2&amp;3&amp;4\6&amp;7&amp;8<br>\end{bmatrix}<br>$$</p>
-<p>$$<br>\begin{pmatrix}<br>\alpha&amp;\beta&amp;\sigma\<br>\theta&amp;\rho&amp;\pi\<br>\delta&amp;\Gamma&amp;\epsilon<br>\end{pmatrix}<br>$$</p>
-<p>$$<br>\begin{Bmatrix}<br>1&amp;2&amp;3\4&amp;5&amp;6\7&amp;8&amp;9\<br>\end{Bmatrix}<br>$$</p>
-<p>$$<br>\begin{vmatrix}<br>a&amp;b&amp;c\d&amp;e&amp;f\g&amp;h&amp;\<br>\end{vmatrix}<br>$$</p>
-<hr>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+1&2&3\\2&3&4\\6&7&8
+\end{bmatrix}</script><script type="math/tex; mode=display">
+\begin{pmatrix}
+\alpha&\beta&\sigma\\
+\theta&\rho&\pi\\
+\delta&\Gamma&\epsilon
+\end{pmatrix}</script><script type="math/tex; mode=display">
+\begin{Bmatrix}
+1&2&3\\4&5&6\\7&8&9\\
+\end{Bmatrix}</script><script type="math/tex; mode=display">
+\begin{vmatrix}
+a&b&c\\d&e&f\\g&h&\\
+\end{vmatrix}</script><hr>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>Markdown 支持几十种编程语言语法高亮</p>
 <ul>
 <li>python</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"hello word"</span>)</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>js</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"hello word"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>C</li>
 </ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"hello word"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>shell</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=hell word</span><br><span class="line">echo "$&#123;a&#125;"</span><br></pre></td></tr></table></figure>
-
 
       
 
@@ -598,19 +600,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tech</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">VSCODE</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tech</a>
               </li>
              
               <li class="article-tag-list-item">

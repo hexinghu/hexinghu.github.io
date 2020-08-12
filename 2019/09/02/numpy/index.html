@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>numpy学习教程 | tiger的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="NumPy–快速处理数据numpy官网">
+  <meta name="description" content="NumPy—快速处理数据numpy官网">
 <meta name="keywords" content="python,numpy,数据处理,机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="numpy学习教程">
 <meta property="og:url" content="http://yoursite.com/2019/09/02/numpy/index.html">
 <meta property="og:site_name" content="tiger的个人博客">
-<meta property="og:description" content="NumPy–快速处理数据numpy官网">
+<meta property="og:description" content="NumPy—快速处理数据numpy官网">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-06-21T18:28:11.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="numpy学习教程">
-<meta name="twitter:description" content="NumPy–快速处理数据numpy官网">
+<meta name="twitter:description" content="NumPy—快速处理数据numpy官网">
   
     <link rel="alternative" href="/atom.xml" title="tiger的个人博客" type="application/atom+xml">
   
@@ -177,37 +177,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="NumPy–快速处理数据"><a href="#NumPy–快速处理数据" class="headerlink" title="NumPy–快速处理数据"></a>NumPy–快速处理数据</h3><p><a href="http://www.numpy.org/" target="_blank" rel="noopener">numpy官网</a></p>
-<a id="more"></a>
-<p> 1 创建数组</p>
+        <h3 id="NumPy—快速处理数据"><a href="#NumPy—快速处理数据" class="headerlink" title="NumPy—快速处理数据"></a>NumPy—快速处理数据</h3><p><a href="http://www.numpy.org/" target="_blank" rel="noopener">numpy官网</a><br><a id="more"></a><br> 1 创建数组</p>
 <p>首先需要创建数组对象才能对其进行运算和操作。可以通过给array()函数传递python的序列对象来创建数组，如果传递的是多级嵌套的序列对象，则创建的是<br> 多维数组<br> 例如：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">b = np.array((<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line">c = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>]])</span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
-
 <pre><code>[1 2 3 4]
 [1 2 3 4]
 [[ 1  2  3  4]
  [ 5  6  7  8]
- [ 9 10 11 12]]</code></pre><p>数组的形状可以通过shape属性获得，它是描述一个数组各轴长度的一个元组（tuple)：</p>
+ [ 9 10 11 12]]
+</code></pre><p>数组的形状可以通过shape属性获得，它是描述一个数组各轴长度的一个元组（tuple)：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.shape</span><br></pre></td></tr></table></figure>
-
-<pre><code>(4,)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b.shape</span><br></pre></td></tr></table></figure>
-
-<pre><code>(4,)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.shape</span><br></pre></td></tr></table></figure>
-
-<pre><code>(3, 4)</code></pre><p>使用数组的reshape()方法可以创建指定形状的新数组而原数组形状不变 ** 注意：此时创建的新数组和原来的数组共享数据存储空间改变任何一个数组的值，对方的值也会跟着改变 **</p>
+<pre><code>(4,)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b.shape</span><br></pre></td></tr></table></figure>
+<pre><code>(4,)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.shape</span><br></pre></td></tr></table></figure>
+<pre><code>(3, 4)
+</code></pre><p>使用数组的reshape()方法可以创建指定形状的新数组而原数组形状不变 <strong> 注意：此时创建的新数组和原来的数组共享数据存储空间改变任何一个数组的值，对方的值也会跟着改变 </strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = a.reshape((<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
-
 <pre><code>[[2 2]
- [3 4]]</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>]=<span class="number">2</span></span><br><span class="line">print(a,d)</span><br></pre></td></tr></table></figure>
-
+ [3 4]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>]=<span class="number">2</span></span><br><span class="line">print(a,d)</span><br></pre></td></tr></table></figure>
 <pre><code>[2 2 3 4] [[2 2]
- [3 4]]</code></pre><p>2 元素类型</p>
+ [3 4]]
+</code></pre><p>2 元素类型</p>
 <p>数组的元素类型可以通过dtype属性获得</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a.dtype)</span><br></pre></td></tr></table></figure>
-
-<pre><code>int32</code></pre><p>完整的元素类型可以通过下面的方法得到：</p>
+<pre><code>int32
+</code></pre><p>完整的元素类型可以通过下面的方法得到：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set(np.typeDict.values())</span><br></pre></td></tr></table></figure>
-
 <pre><code>{numpy.bool_,
  numpy.bytes_,
  numpy.complex128,
@@ -231,59 +228,59 @@
  numpy.uint32,
  numpy.uint64,
  numpy.uint8,
- numpy.void}</code></pre><p>使用astype()方法可以改变数组元素的类型,这种改变会生成一个新的数组，原来的数组并不会改变</p>
+ numpy.void}
+</code></pre><p>使用astype()方法可以改变数组元素的类型,这种改变会生成一个新的数组，原来的数组并不会改变</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t = a.astype(np.int64)</span><br><span class="line">print(t.dtype,a.dtype)</span><br></pre></td></tr></table></figure>
-
-<pre><code>int64 int32</code></pre><p>3 自动生成数组</p>
+<pre><code>int64 int32
+</code></pre><p>3 自动生成数组</p>
 <p>NumPy提供了很多专门用来创建数组的方法，例如：</p>
 <ul>
 <li>arange()方法和range()方法类似，指定开始值和结束值以及步长(默认为1)</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">1</span>,<span class="number">9</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([1, 3, 5, 7])</code></pre><p>上面参数1表示开始值，参数9表示终止值，参数2表示步长</p>
+<pre><code>array([1, 3, 5, 7])
+</code></pre><p>上面参数1表示开始值，参数9表示终止值，参数2表示步长</p>
 <ul>
 <li>linspace()方法和logspace()方法</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linspace(<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">10</span>,endpoint=<span class="literal">True</span>)<span class="comment">#1表示起始值，1.5表示终止值，10表示元素个数，生成一个等差数组</span></span><br></pre></td></tr></table></figure>
-
 <pre><code>array([1.        , 1.05555556, 1.11111111, 1.16666667, 1.22222222,
-       1.27777778, 1.33333333, 1.38888889, 1.44444444, 1.5       ])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.logspace(<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">10</span>,endpoint=<span class="literal">True</span>)<span class="comment">#和linspace()类似，不过生成的是一个等比数组，默认是以10为基数，可以通过base参数指定基数</span></span><br></pre></td></tr></table></figure>
-
+       1.27777778, 1.33333333, 1.38888889, 1.44444444, 1.5       ])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.logspace(<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">10</span>,endpoint=<span class="literal">True</span>)<span class="comment">#和linspace()类似，不过生成的是一个等比数组，默认是以10为基数，可以通过base参数指定基数</span></span><br></pre></td></tr></table></figure>
 <pre><code>array([10.        , 11.36463666, 12.91549665, 14.67799268, 16.68100537,
-       18.95735652, 21.5443469 , 24.48436747, 27.82559402, 31.6227766 ])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.logspace(<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">10</span>,base=<span class="number">2</span>,endpoint=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
+       18.95735652, 21.5443469 , 24.48436747, 27.82559402, 31.6227766 ])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.logspace(<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">10</span>,base=<span class="number">2</span>,endpoint=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>array([2.        , 2.07851845, 2.16011948, 2.2449241 , 2.33305808,
-       2.42465213, 2.5198421 , 2.61876915, 2.72158   , 2.82842712])</code></pre><ul>
+       2.42465213, 2.5198421 , 2.61876915, 2.72158   , 2.82842712])
+</code></pre><ul>
 <li>zeros()、ones()、empty()可以创建指定形状的数组，其中empty()方法只分配数组使用的内存，不对数组初始化</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((<span class="number">2</span>,<span class="number">3</span>),dtype=np.float32)</span><br></pre></td></tr></table></figure>
-
 <pre><code>array([[0., 0., 0.],
-       [0., 0., 0.]], dtype=float32)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ones((<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
-
+       [0., 0., 0.]], dtype=float32)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ones((<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
 <pre><code>array([[1., 1., 1.],
-       [1., 1., 1.]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.empty((<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
-
+       [1., 1., 1.]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.empty((<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
 <pre><code>array([[1., 1., 1.],
-       [1., 1., 1.]])</code></pre><ul>
+       [1., 1., 1.]])
+</code></pre><ul>
 <li>zeros_like()、ones_like()、empty()和full_like()方法创建和参数数组形状和类型相同的数组，例如：</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.zeros_like(d)</span><br></pre></td></tr></table></figure>
-
 <pre><code>array([[0, 0],
-       [0, 0]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ones_like(d)</span><br></pre></td></tr></table></figure>
-
+       [0, 0]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ones_like(d)</span><br></pre></td></tr></table></figure>
 <pre><code>array([[1, 1],
-       [1, 1]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.empty_like(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([         1,          0, 1969513842, 1600087395])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.full_like(b,fill_value=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([2, 2, 2, 2])</code></pre><ul>
+       [1, 1]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.empty_like(a)</span><br></pre></td></tr></table></figure>
+<pre><code>array([         1,          0, 1969513842, 1600087395])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.full_like(b,fill_value=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([2, 2, 2, 2])
+</code></pre><ul>
 <li>fromstring()、frombuffer()、fromfunction()、fromfile()方法</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'abcgfgij'</span></span><br><span class="line">np.fromstring(s,np.int8)</span><br></pre></td></tr></table></figure>
-
 <pre><code>D:\Anaconda\lib\site-packages\ipykernel_launcher.py:2: DeprecationWarning: The binary mode of fromstring is deprecated, as it behaves surprisingly on unicode inputs. Use frombuffer instead
 
 
@@ -291,8 +288,8 @@
 
 
 
-array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(i,j)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (i+<span class="number">1</span>)*(j+<span class="number">1</span>)</span><br><span class="line">np.fromfunction(func,(<span class="number">9</span>,<span class="number">9</span>))</span><br></pre></td></tr></table></figure>
-
+array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(i,j)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (i+<span class="number">1</span>)*(j+<span class="number">1</span>)</span><br><span class="line">np.fromfunction(func,(<span class="number">9</span>,<span class="number">9</span>))</span><br></pre></td></tr></table></figure>
 <pre><code>array([[ 1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9.],
        [ 2.,  4.,  6.,  8., 10., 12., 14., 16., 18.],
        [ 3.,  6.,  9., 12., 15., 18., 21., 24., 27.],
@@ -301,83 +298,87 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
        [ 6., 12., 18., 24., 30., 36., 42., 48., 54.],
        [ 7., 14., 21., 28., 35., 42., 49., 56., 63.],
        [ 8., 16., 24., 32., 40., 48., 56., 64., 72.],
-       [ 9., 18., 27., 36., 45., 54., 63., 72., 81.]])</code></pre><p>4 存取元素</p>
+       [ 9., 18., 27., 36., 45., 54., 63., 72., 81.]])
+</code></pre><p>4 存取元素</p>
 <p>可以使用和列表相同的方式对数组进行存取，不同的是通过切片操作获得的数组是原始数组的一个视图，与原始数组共享同一块数据存储空间</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g = np.arange(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(g)</span><br></pre></td></tr></table></figure>
-
-<pre><code>[0 1 2 3 4 5 6 7 8 9]</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-
-<pre><code>3</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[<span class="number">3</span>:]</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([3, 4, 5, 6, 7, 8, 9])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[<span class="number">3</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([3, 4])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[:<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[<span class="number">-5</span>:<span class="number">-3</span>]</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([5, 6])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[:]</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre><p>除了切片下标存取元素外，NumPy还提供了整数列表、整数数组、布尔数组等几种高级下表存取法 <strong>* 注意：不和原始数组共享数据空间 *</strong></p>
+<pre><code>[0 1 2 3 4 5 6 7 8 9]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>3
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[<span class="number">3</span>:]</span><br></pre></td></tr></table></figure>
+<pre><code>array([3, 4, 5, 6, 7, 8, 9])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[<span class="number">3</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([3, 4])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[:<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[<span class="number">-5</span>:<span class="number">-3</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([5, 6])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[:]</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</code></pre><p>除了切片下标存取元素外，NumPy还提供了整数列表、整数数组、布尔数组等几种高级下表存取法 <strong><em> 注意：不和原始数组共享数据空间 </em></strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>]]</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([1, 2, 4])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[[<span class="number">4</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([4, 3, 8, 1])</code></pre><p>5 ufunc函数（通用函数）</p>
+<pre><code>array([1, 2, 4])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g[[<span class="number">4</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([4, 3, 8, 1])
+</code></pre><p>5 ufunc函数（通用函数）</p>
 <p>ufunc函数都是用C语言写的，因此计算速度非常快，让我们来看个例子：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%timeit</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x = np.linspace(<span class="number">0</span>,<span class="number">2</span>*np.pi,<span class="number">10</span>)</span><br><span class="line">np.sin(x)</span><br></pre></td></tr></table></figure>
-
 <pre><code>array([ 0.00000000e+00,  6.42787610e-01,  9.84807753e-01,  8.66025404e-01,
         3.42020143e-01, -3.42020143e-01, -8.66025404e-01, -9.84807753e-01,
-       -6.42787610e-01, -2.44929360e-16])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t = np.sin(x,out=x)</span><br><span class="line">t</span><br></pre></td></tr></table></figure>
-
+       -6.42787610e-01, -2.44929360e-16])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t = np.sin(x,out=x)</span><br><span class="line">t</span><br></pre></td></tr></table></figure>
 <pre><code>array([ 0.00000000e+00,  6.42787610e-01,  9.84807753e-01,  8.66025404e-01,
         3.42020143e-01, -3.42020143e-01, -8.66025404e-01, -9.84807753e-01,
-       -6.42787610e-01, -2.44929360e-16])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t <span class="keyword">is</span> x</span><br></pre></td></tr></table></figure>
-
-<pre><code>True</code></pre><p>从上面可以看出，我们可以通过out参数来指定输出对象。</p>
+       -6.42787610e-01, -2.44929360e-16])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t <span class="keyword">is</span> x</span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><p>从上面可以看出，我们可以通过out参数来指定输出对象。</p>
 <p>数组的运算符及对应的ufunc函数：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">表达式</th>
-<th align="center">对应的ufunc函数</th>
+<th style="text-align:center">表达式</th>
+<th style="text-align:center">对应的ufunc函数</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">$ y=x1 + x2 $</td>
-<td align="center">add(x1,x2,[,y]</td>
+<tbody>
+<tr>
+<td style="text-align:center">$ y=x1 + x2 $</td>
+<td style="text-align:center">add(x1,x2,[,y]</td>
 </tr>
 <tr>
-<td align="center">$ y=x1 - x2 $</td>
-<td align="center">subtract(x1,x2,[,y]</td>
+<td style="text-align:center">$ y=x1 - x2 $</td>
+<td style="text-align:center">subtract(x1,x2,[,y]</td>
 </tr>
 <tr>
-<td align="center">$ y=x1 * x2 $</td>
-<td align="center">multiply(x1,x2,[,y]</td>
+<td style="text-align:center">$ y=x1 * x2 $</td>
+<td style="text-align:center">multiply(x1,x2,[,y]</td>
 </tr>
 <tr>
-<td align="center">$ y=x1 / x2 $</td>
-<td align="center">divide(x1,x2,[,y]</td>
+<td style="text-align:center">$ y=x1 / x2 $</td>
+<td style="text-align:center">divide(x1,x2,[,y]</td>
 </tr>
 <tr>
-<td align="center">$ y=x1 // x2 $</td>
-<td align="center">floor_divide(x1,x2,[,y]</td>
+<td style="text-align:center">$ y=x1 // x2 $</td>
+<td style="text-align:center">floor_divide(x1,x2,[,y]</td>
 </tr>
 <tr>
-<td align="center">$ y=x1 ** x2 $</td>
-<td align="center">power(x1,x2,[,y]</td>
+<td style="text-align:center">$ y=x1 ** x2 $</td>
+<td style="text-align:center">power(x1,x2,[,y]</td>
 </tr>
 <tr>
-<td align="center">$ y=x1 % x2 $</td>
-<td align="center">mod(x1,x2,[,y]</td>
+<td style="text-align:center">$ y=x1 \% x2 $</td>
+<td style="text-align:center">mod(x1,x2,[,y]</td>
 </tr>
 <tr>
-<td align="center">$ y=-x $</td>
-<td align="center">negative(x,[,y]</td>
+<td style="text-align:center">$ y=-x $</td>
+<td style="text-align:center">negative(x,[,y]</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p> 6 广播</p>
 <p>当使用ufunc函数对两个数组进行计算时，ufunc函数会对这连个数组的对应元素进行计算，因此他要求连个数组的形状要一样。如果形状不同会对数组进行广播处理：</p>
 <ul>
@@ -387,7 +388,6 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
 <li>当输入数组的某个轴的长度为1时，沿着此轴运算是都用此轴上的第一组值</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">0</span>,<span class="number">1</span>,<span class="number">0.1</span>).reshape((<span class="number">-1</span>,<span class="number">1</span>))</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-
 <pre><code>array([[0. ],
        [0.1],
        [0.2],
@@ -397,10 +397,10 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
        [0.6],
        [0.7],
        [0.8],
-       [0.9]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.arange(<span class="number">0</span>,<span class="number">5</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([0, 1, 2, 3, 4])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = a+b</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
-
+       [0.9]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.arange(<span class="number">0</span>,<span class="number">5</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2, 3, 4])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = a+b</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
 <pre><code>array([[0. , 1. , 2. , 3. , 4. ],
        [0.1, 1.1, 2.1, 3.1, 4.1],
        [0.2, 1.2, 2.2, 3.2, 4.2],
@@ -410,19 +410,19 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
        [0.6, 1.6, 2.6, 3.6, 4.6],
        [0.7, 1.7, 2.7, 3.7, 4.7],
        [0.8, 1.8, 2.8, 3.8, 4.8],
-       [0.9, 1.9, 2.9, 3.9, 4.9]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.shape</span><br></pre></td></tr></table></figure>
-
-<pre><code>(10, 5)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b.shape = (<span class="number">1</span>,<span class="number">5</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([[0, 1, 2, 3, 4]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b.repeat(<span class="number">6</span>,axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
+       [0.9, 1.9, 2.9, 3.9, 4.9]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.shape</span><br></pre></td></tr></table></figure>
+<pre><code>(10, 5)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b.shape = (<span class="number">1</span>,<span class="number">5</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2, 3, 4]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b.repeat(<span class="number">6</span>,axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>array([[0, 1, 2, 3, 4],
        [0, 1, 2, 3, 4],
        [0, 1, 2, 3, 4],
        [0, 1, 2, 3, 4],
        [0, 1, 2, 3, 4],
-       [0, 1, 2, 3, 4]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.repeat(<span class="number">5</span>,axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
+       [0, 1, 2, 3, 4]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.repeat(<span class="number">5</span>,axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>array([[0. , 0. , 0. , 0. , 0. ],
        [0.1, 0.1, 0.1, 0.1, 0.1],
        [0.2, 0.2, 0.2, 0.2, 0.2],
@@ -432,16 +432,16 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
        [0.6, 0.6, 0.6, 0.6, 0.6],
        [0.7, 0.7, 0.7, 0.7, 0.7],
        [0.8, 0.8, 0.8, 0.8, 0.8],
-       [0.9, 0.9, 0.9, 0.9, 0.9]])</code></pre><p>当然这样比较浪费内存空间，因为repeat()会生成新的数组，对此NumPy提供了ogrid对象，用于广播运算的数组</p>
+       [0.9, 0.9, 0.9, 0.9, 0.9]])
+</code></pre><p>当然这样比较浪费内存空间，因为repeat()会生成新的数组，对此NumPy提供了ogrid对象，用于广播运算的数组</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x,y = np.ogrid[:<span class="number">5</span>,:<span class="number">5</span>]</span><br><span class="line">x,y</span><br></pre></td></tr></table></figure>
-
 <pre><code>(array([[0],
         [1],
         [2],
         [3],
-        [4]]), array([[0, 1, 2, 3, 4]]))</code></pre><p>NumPy还提供了mgrid对象，与ogrid类似，不过它返回的是广播过后的数组</p>
+        [4]]), array([[0, 1, 2, 3, 4]]))
+</code></pre><p>NumPy还提供了mgrid对象，与ogrid类似，不过它返回的是广播过后的数组</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x,y = np.mgrid[<span class="number">1</span>:<span class="number">10</span>,<span class="number">2</span>:<span class="number">5</span>]</span><br><span class="line">x,y</span><br></pre></td></tr></table></figure>
-
 <pre><code>(array([[1, 1, 1],
         [2, 2, 2],
         [3, 3, 3],
@@ -458,11 +458,11 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
         [2, 3, 4],
         [2, 3, 4],
         [2, 3, 4],
-        [2, 3, 4]]))</code></pre><p>NumPy还提供了meshgrid()方法可以对列表进行广播</p>
+        [2, 3, 4]]))
+</code></pre><p>NumPy还提供了meshgrid()方法可以对列表进行广播</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = [i*<span class="number">3</span><span class="number">-1</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
-
-<pre><code>[-1, 2, 5, 8, 11, 14, 17, 20, 23, 26]</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.meshgrid(x,x)</span><br></pre></td></tr></table></figure>
-
+<pre><code>[-1, 2, 5, 8, 11, 14, 17, 20, 23, 26]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.meshgrid(x,x)</span><br></pre></td></tr></table></figure>
 <pre><code>[array([[-1,  2,  5,  8, 11, 14, 17, 20, 23, 26],
         [-1,  2,  5,  8, 11, 14, 17, 20, 23, 26],
         [-1,  2,  5,  8, 11, 14, 17, 20, 23, 26],
@@ -482,110 +482,116 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
         [17, 17, 17, 17, 17, 17, 17, 17, 17, 17],
         [20, 20, 20, 20, 20, 20, 20, 20, 20, 20],
         [23, 23, 23, 23, 23, 23, 23, 23, 23, 23],
-        [26, 26, 26, 26, 26, 26, 26, 26, 26, 26]])]</code></pre><p>ufunc对象的其他方法（reduce和accumulate</p>
+        [26, 26, 26, 26, 26, 26, 26, 26, 26, 26]])]
+</code></pre><p>ufunc对象的其他方法（reduce和accumulate</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r1 = np.add.reduce([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">r1</span><br></pre></td></tr></table></figure>
-
-<pre><code>6</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r2 = np.subtract.reduce([<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>])</span><br><span class="line">r2</span><br></pre></td></tr></table></figure>
-
-<pre><code>-9</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.add.accumulate([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
-
+<pre><code>6
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r2 = np.subtract.reduce([<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>])</span><br><span class="line">r2</span><br></pre></td></tr></table></figure>
+<pre><code>-9
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.add.accumulate([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
 <pre><code>array([[1, 2, 3],
-       [5, 7, 9]], dtype=int32)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.add.accumulate([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([ 1,  3,  6, 10, 15], dtype=int32)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.multiply.outer([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">2</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">8</span>])</span><br></pre></td></tr></table></figure>
-
+       [5, 7, 9]], dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.add.accumulate([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 1,  3,  6, 10, 15], dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.multiply.outer([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">2</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">8</span>])</span><br></pre></td></tr></table></figure>
 <pre><code>array([[ 2,  5,  3,  6,  8],
        [ 4, 10,  6, 12, 16],
        [ 6, 15,  9, 18, 24],
-       [ 8, 20, 12, 24, 32]])</code></pre><p>7 函数库</p>
+       [ 8, 20, 12, 24, 32]])
+</code></pre><p>7 函数库</p>
 <ul>
 <li>随机数</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">函数名</th>
-<th align="center">功能</th>
+<th style="text-align:center">函数名</th>
+<th style="text-align:center">功能</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">rand</td>
-<td align="center">0到1之间的随机数</td>
+<tbody>
+<tr>
+<td style="text-align:center">rand</td>
+<td style="text-align:center">0到1之间的随机数</td>
 </tr>
 <tr>
-<td align="center">randn</td>
-<td align="center">标准正态分布随机数</td>
+<td style="text-align:center">randn</td>
+<td style="text-align:center">标准正态分布随机数</td>
 </tr>
 <tr>
-<td align="center">randint</td>
-<td align="center">指定范围的随机数</td>
+<td style="text-align:center">randint</td>
+<td style="text-align:center">指定范围的随机数</td>
 </tr>
 <tr>
-<td align="center">normal</td>
-<td align="center">正态分布</td>
+<td style="text-align:center">normal</td>
+<td style="text-align:center">正态分布</td>
 </tr>
 <tr>
-<td align="center">uniform</td>
-<td align="center">均匀分布</td>
+<td style="text-align:center">uniform</td>
+<td style="text-align:center">均匀分布</td>
 </tr>
 <tr>
-<td align="center">possion</td>
-<td align="center">泊松分布</td>
+<td style="text-align:center">possion</td>
+<td style="text-align:center">泊松分布</td>
 </tr>
 <tr>
-<td align="center">permutation</td>
-<td align="center">随机排列</td>
+<td style="text-align:center">permutation</td>
+<td style="text-align:center">随机排列</td>
 </tr>
 <tr>
-<td align="center">shuffle</td>
-<td align="center">随机打乱顺序</td>
+<td style="text-align:center">shuffle</td>
+<td style="text-align:center">随机打乱顺序</td>
 </tr>
 <tr>
-<td align="center">choice</td>
-<td align="center">随机取样</td>
+<td style="text-align:center">choice</td>
+<td style="text-align:center">随机取样</td>
 </tr>
 <tr>
-<td align="center">seed</td>
-<td align="center">设置随机种子</td>
+<td style="text-align:center">seed</td>
+<td style="text-align:center">设置随机种子</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.rand(<span class="number">4</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
 <pre><code>array([[0.49527903, 0.60504845, 0.77199809],
        [0.29434029, 0.28529868, 0.91671446],
        [0.75932054, 0.57987357, 0.50724197],
-       [0.32430096, 0.28049917, 0.06121927]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.randint(<span class="number">2</span>,<span class="number">10</span>,(<span class="number">4</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
-
+       [0.32430096, 0.28049917, 0.06121927]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.randint(<span class="number">2</span>,<span class="number">10</span>,(<span class="number">4</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
 <pre><code>array([[8, 8, 8],
        [5, 7, 3],
        [7, 5, 9],
-       [3, 8, 6]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.randn(<span class="number">4</span>,<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-
+       [3, 8, 6]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.randn(<span class="number">4</span>,<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>array([[ 0.05342908,  0.53592508, -0.40835572, -1.57338237, -1.09763109],
        [-0.14483236, -0.67100518,  0.24233258, -0.47532544,  0.72091345],
        [ 0.71137182,  0.10584141, -0.49632466, -0.78513602,  1.62519341],
-       [-0.56309118, -0.76332315, -1.1503351 ,  0.10328419, -0.81588498]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">5</span>,<span class="number">0.8</span>,(<span class="number">10</span>,))</span><br></pre></td></tr></table></figure>
-
+       [-0.56309118, -0.76332315, -1.1503351 ,  0.10328419, -0.81588498]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">5</span>,<span class="number">0.8</span>,(<span class="number">10</span>,))</span><br></pre></td></tr></table></figure>
 <pre><code>array([3.2087878 , 4.65799672, 4.89149176, 4.95444905, 4.76988224,
-       4.91956819, 5.13050569, 4.7800823 , 4.55731749, 5.91751027])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.uniform(<span class="number">1</span>,<span class="number">10</span>,(<span class="number">4</span>,<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
-
+       4.91956819, 5.13050569, 4.7800823 , 4.55731749, 5.91751027])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.uniform(<span class="number">1</span>,<span class="number">10</span>,(<span class="number">4</span>,<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
 <pre><code>array([[9.65744436, 5.70799519, 6.27461113, 9.19422402, 3.41034932],
        [7.51633998, 7.2932394 , 6.61791867, 7.22796638, 3.84816789],
        [1.55636584, 9.28135459, 1.97108739, 6.9599354 , 9.40407354],
-       [8.99814775, 7.04190946, 7.86347481, 7.53375282, 8.29634385]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">np.random.shuffle(b)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
-
-<pre><code>[2, 1, 4, 5, 3, 6]</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.choice([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],(<span class="number">4</span>,<span class="number">7</span>))</span><br></pre></td></tr></table></figure>
-
+       [8.99814775, 7.04190946, 7.86347481, 7.53375282, 8.29634385]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">np.random.shuffle(b)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<pre><code>[2, 1, 4, 5, 3, 6]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.choice([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],(<span class="number">4</span>,<span class="number">7</span>))</span><br></pre></td></tr></table></figure>
 <pre><code>array([[4, 2, 2, 4, 2, 1, 2],
        [3, 3, 3, 3, 4, 2, 1],
        [4, 4, 3, 4, 1, 2, 4],
-       [4, 2, 3, 2, 2, 2, 3]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">42</span>)<span class="comment">#随机种子的目的是为了后面可以生成相同的随机数</span></span><br><span class="line">np.random.rand()</span><br></pre></td></tr></table></figure>
-
-<pre><code>0.3745401188473625</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">np.random.rand()</span><br></pre></td></tr></table></figure>
-
-<pre><code>0.9507143064099162</code></pre><ul>
+       [4, 2, 3, 2, 2, 2, 3]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">42</span>)<span class="comment">#随机种子的目的是为了后面可以生成相同的随机数</span></span><br><span class="line">np.random.rand()</span><br></pre></td></tr></table></figure>
+<pre><code>0.3745401188473625
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">np.random.rand()</span><br></pre></td></tr></table></figure>
+<pre><code>0.9507143064099162
+</code></pre><ul>
 <li>统计函数</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -593,7 +599,8 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>sum</td>
 <td>求和</td>
 </tr>
@@ -617,38 +624,41 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
 <td>product</td>
 <td>连续积</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">0</span>)</span><br><span class="line">a=np.random.randn(<span class="number">4</span>,<span class="number">5</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-
 <pre><code>array([[ 1.76405235,  0.40015721,  0.97873798,  2.2408932 ,  1.86755799],
        [-0.97727788,  0.95008842, -0.15135721, -0.10321885,  0.4105985 ],
        [ 0.14404357,  1.45427351,  0.76103773,  0.12167502,  0.44386323],
-       [ 0.33367433,  1.49407907, -0.20515826,  0.3130677 , -0.85409574]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.sum(a,axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([7.25139873, 0.12883298, 2.92489305, 1.0815671 ])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.sum(a,axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([1.26449236, 4.29859821, 1.38326024, 2.57241707, 1.86792399])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.sum(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>11.386691858912695</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mean(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>0.5693345929456347</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.average(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>0.5693345929456347</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mean(a,axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>array([1.45027975, 0.0257666 , 0.58497861, 0.21631342])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.var(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>0.7228107940950779</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.std(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>0.8501828003994658</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.product(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>-4.055013942478093e-06</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.argsort(a,axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
+       [ 0.33367433,  1.49407907, -0.20515826,  0.3130677 , -0.85409574]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.sum(a,axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([7.25139873, 0.12883298, 2.92489305, 1.0815671 ])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.sum(a,axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1.26449236, 4.29859821, 1.38326024, 2.57241707, 1.86792399])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.sum(a)</span><br></pre></td></tr></table></figure>
+<pre><code>11.386691858912695
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mean(a)</span><br></pre></td></tr></table></figure>
+<pre><code>0.5693345929456347
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.average(a)</span><br></pre></td></tr></table></figure>
+<pre><code>0.5693345929456347
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mean(a,axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1.45027975, 0.0257666 , 0.58497861, 0.21631342])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.var(a)</span><br></pre></td></tr></table></figure>
+<pre><code>0.7228107940950779
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.std(a)</span><br></pre></td></tr></table></figure>
+<pre><code>0.8501828003994658
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.product(a)</span><br></pre></td></tr></table></figure>
+<pre><code>-4.055013942478093e-06
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.argsort(a,axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>array([[1, 2, 0, 4, 3],
        [0, 2, 3, 4, 1],
        [3, 0, 4, 2, 1],
-       [4, 2, 3, 0, 1]], dtype=int64)</code></pre><ul>
+       [4, 2, 3, 0, 1]], dtype=int64)
+</code></pre><ul>
 <li>大小和排序</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -656,7 +666,8 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>min</td>
 <td>最小值</td>
 </tr>
@@ -716,27 +727,28 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
 <td>searchsorted</td>
 <td>二分查找</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.random.randint(<span class="number">2</span>,<span class="number">100</span>,(<span class="number">100</span>,))</span><br><span class="line">np.min(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>2</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%timeit np.max(a)</span><br></pre></td></tr></table></figure>
-
-<pre><code>1.81 µs ± 11.4 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.sort(np.random.rand(<span class="number">100</span>))</span><br><span class="line">np.argsort(np.random.rand(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
-
+<pre><code>2
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%timeit np.max(a)</span><br></pre></td></tr></table></figure>
+<pre><code>1.81 µs ± 11.4 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.sort(np.random.rand(<span class="number">100</span>))</span><br><span class="line">np.argsort(np.random.rand(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
 <pre><code>array([97, 11, 72, 30, 60, 52, 28, 75, 54, 81, 43, 56, 77, 98, 44, 23, 42,
        94, 13, 39, 29, 49, 25, 68, 61, 91, 70, 58, 79, 74, 62, 71, 17, 46,
        78, 33, 36, 50, 92, 66,  8, 35,  0, 89, 83, 55, 76, 51, 19, 45, 67,
        84,  9, 22, 40,  3, 53, 82, 87, 24, 31, 86, 32, 73, 99, 21, 63, 90,
        10,  1, 65,  4, 18, 16, 57, 34, 85, 27,  5, 88, 15,  2, 14, 93, 20,
        95, 12, 59, 69, 80, 26, 41, 96, 48,  6, 37, 47, 64, 38,  7],
-      dtype=int64)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.max(b)</span><br></pre></td></tr></table></figure>
-
-<pre><code>2.5262962365792805</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.argmax(b)</span><br></pre></td></tr></table></figure>
-
-<pre><code>31</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.median(b)</span><br></pre></td></tr></table></figure>
-
-<pre><code>-0.07356846734112592</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.partition(b,<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
-
+      dtype=int64)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.max(b)</span><br></pre></td></tr></table></figure>
+<pre><code>2.5262962365792805
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.argmax(b)</span><br></pre></td></tr></table></figure>
+<pre><code>31
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.median(b)</span><br></pre></td></tr></table></figure>
+<pre><code>-0.07356846734112592
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.partition(b,<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>array([[ 0.15901081, -0.3639422 , -2.02490373, -0.42366511,  0.37729265,
          0.62517187,  0.68081547,  0.86333093],
        [ 0.50937255, -1.64159436, -0.34031755, -0.57832496,  0.82217681,
@@ -756,8 +768,8 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
        [-2.21331893, -1.14016618, -2.26742709, -0.73581546,  0.27924965,
          0.6203761 ,  0.75951615,  1.24385148],
        [-0.14782764, -0.09790598, -1.29453151,  0.0087432 ,  0.02143666,
-         0.39676434,  0.68461404,  1.52543929]])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b</span><br></pre></td></tr></table></figure>
-
+         0.39676434,  0.68461404,  1.52543929]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b</span><br></pre></td></tr></table></figure>
 <pre><code>array([[ 0.68081547, -0.42366511, -2.02490373,  0.37729265,  0.62517187,
          0.86333093,  0.15901081, -0.3639422 ],
        [ 1.00878852,  0.92923577, -0.34031755, -1.64159436,  0.50937255,
@@ -777,7 +789,8 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
        [ 0.27924965,  0.75951615,  0.6203761 , -1.14016618, -2.21331893,
         -0.73581546, -2.26742709,  1.24385148],
        [ 0.0087432 ,  1.52543929, -1.29453151, -0.09790598,  0.68461404,
-         0.02143666, -0.14782764,  0.39676434]])</code></pre>
+         0.02143666, -0.14782764,  0.39676434]])
+</code></pre>
       
 
       
@@ -952,7 +965,7 @@ array([ 97,  98,  99, 103, 102, 103, 105, 106], dtype=int8)</code></pre><figure 
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NumPy–快速处理数据"><span class="toc-number">1.</span> <span class="toc-text">NumPy–快速处理数据</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NumPy—快速处理数据"><span class="toc-number">1.</span> <span class="toc-text">NumPy—快速处理数据</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -1101,19 +1114,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tech</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">VSCODE</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tech</a>
               </li>
              
               <li class="article-tag-list-item">
